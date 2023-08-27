@@ -9,15 +9,15 @@
 #define PIN        5 // Strip led DIN
 
 #define red_CLK 16
-#define red1_DIO 17
-#define red2_DIO 18
-#define red3_DIO 19
+#define red1_DIO 18
+#define red2_DIO 33
+#define red3_DIO 35
 
-#define AM 32
-#define PM 33
+#define AM 39
+#define PM 40
 
 // How many NeoPixels are attached to the Arduino?
-#define NUMPIXELS 48 // Popular NeoPixel ring size
+#define NUMPIXELS 36
 
 bool res;
 int var=0;
