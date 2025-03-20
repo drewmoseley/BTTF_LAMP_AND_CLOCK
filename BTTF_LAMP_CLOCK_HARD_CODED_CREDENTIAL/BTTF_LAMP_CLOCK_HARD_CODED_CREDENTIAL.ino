@@ -21,7 +21,7 @@
 int ledColorMode = -1;
 
 /* UTC offset to US/Eastern time zone */
-const long utcOffsetInSeconds = -14400;
+const long utcOffsetInSeconds = -10800;
 
 const int Display_backlight = 2;
 
