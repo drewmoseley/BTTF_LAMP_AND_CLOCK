@@ -20,8 +20,8 @@
 
 int ledColorMode = -1;
 
-/* UTC offset to US/Eastern time zone */
-const long utcOffsetInSeconds = -10800;
+/* UTC offset to US/Eastern standard time (EST) */
+const long utcOffsetInSeconds = -18000;
 
 const int Display_backlight = 2;
 
@@ -97,10 +97,10 @@ void loop() {
 
   if ((month * 30 + day) >= 121 && (month * 30 + day) < 331) {
     // DST adjustment - Summer
-    timeClient.setTimeOffset(utcOffsetInSeconds);
+    timeClient.setTimeOffset(utcOffsetInSeconds + 3600);
   } else {                                           
     // DST adjustment - Winter
-    timeClient.setTimeOffset(utcOffsetInSeconds - 3600);
+    timeClient.setTimeOffset(utcOffsetInSeconds);
   }
 
   if (timeClient.getHours() >= 12) {
